@@ -11,11 +11,11 @@ jobs:
       - uses: actions/checkout@v3
     
       - name: "login to Docker hub"
-        run: docker login --username hegazy10 --password ${{secrets.DOCKER_TOKEN}}
+        run: docker login --username hegazy9 --password ${{secrets.DOCKER_TOKEN}}
 
       - name: "Building docker image"
-        run: docker build -t hegazy10/test .
+        run: docker build -t hegazy9/test .
 
       - name: "pushing to Docker hub"
-        run: docker push hegazy10/test
+        run: docker push hegazy9/test
 

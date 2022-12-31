@@ -1,5 +1,5 @@
 from openjdk
-workdir /application
+WORKDIR /application
 copy youssef.java
 run javac youssef.java
 cmd.java.youssef

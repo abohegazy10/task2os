@@ -9,10 +9,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+    
       - name: "login to Docker hub"
         run: docker login --username hegazy10 --password ${{secrets.DOCKER_TOKEN}}
 
-      - name: "Build docker image"
+      - name: "Building docker image"
         run: docker build -t hegazy10/test .
 
       - name: "pushing to Docker hub"

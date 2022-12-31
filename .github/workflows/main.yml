@@ -14,8 +14,8 @@ jobs:
         run: docker login --username hegazy9 --password ${{secrets.DOCKER_TOKEN}}
 
       - name: "Building docker image"
-        run: docker build -t hegazy9/test .
+        run: docker build -t hegazy9/myimage .
 
       - name: "pushing to Docker hub"
-        run: docker push hegazy9/test
+        run: docker push hegazy9/myimage
 

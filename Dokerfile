@@ -1,0 +1,5 @@
+from openjdk
+workdir /application
+copy youssef.java
+run javac youssef.java
+cmd.java.youssef

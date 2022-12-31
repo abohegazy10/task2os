@@ -1,1 +1,20 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: "login to Docker hub"
+        run: docker login --username hegazy10 --password ${{secrets.DOCKER_TOKEN}}
+
+      - name: "build image"
+        run: docker build -t hegazy10/test .
+
+      - name: "pushing to docker hub"
+        run: docker push hegazy10/tests
 
